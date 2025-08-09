@@ -112,3 +112,22 @@ button.act[data-act="save"],button.act[data-act="load"]{background:#27384e;}
 #actions .row {
   gap: 10px;
 }
+
+
+/* --- 画面レイアウト調整 --- */
+
+/* マップと下部UIの間に余白を追加 */
+#screen {
+  margin-bottom: 20px;
+}
+
+/* タッチ操作ボタン間隔調整 */
+#touch-controls {
+  margin-top: 10px; /* マップとの距離 */
+  gap: 14px; /* ボタン間隔 */
+}
+
+/* Dパッド全体を少し下げる */
+#dpad {
+  margin-top: 5px;
+}
