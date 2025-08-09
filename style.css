@@ -121,3 +121,20 @@ button.act[data-act="save"],button.act[data-act="load"]{background:#27384e;}
     margin-top: 12px;
   }
 }
+
+
+/* --- モバイル視認性改善 --- */
+@media (max-width: 480px) {
+  /* D-Padとアクションボタンの背景を半透明化 */
+  #touch-controls button {
+    background: rgba(50, 50, 50, 0.6); /* 半透明濃い灰色 */
+    color: white;
+    border-radius: 10px;
+  }
+
+  /* ボタンを下に少し下げる（マップが見やすくなる） */
+  #touch-controls {
+    position: fixed;
+    bottom: 15px; /* デフォルトより下げる */
+  }
+}
