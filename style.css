@@ -105,3 +105,19 @@ button.act[data-act="save"],button.act[data-act="load"]{background:#27384e;}
 #dpad {
   margin-top: 8px;
 }
+
+/* --- スマホ縦画面でのマップ視認性アップ --- */
+@media (max-width: 480px) {
+  #screen {
+    margin-bottom: 60px; /* マップとボタンの距離をさらに広げる */
+  }
+
+  #touch-controls {
+    margin-top: 20px; /* ボタン群の位置を下にずらす */
+    gap: 20px; /* ボタンの間隔を広めに */
+  }
+
+  #dpad {
+    margin-top: 12px;
+  }
+}
