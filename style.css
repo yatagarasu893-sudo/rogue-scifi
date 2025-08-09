@@ -117,3 +117,30 @@ button.act[data-act="save"],button.act[data-act="load"]{background:#27384e;}
   /* Dパッドだけ少し下げたい場合の微調整 */
   #dpad { margin-top: 12px; }
 }
+
+/* --- モバイル視認性・ボタン位置調整（追加） --- */
+@media (max-width: 480px) {
+  /* マップ下の余白をさらに確保 */
+  #screen {
+    margin-bottom: 80px; /* 64→80に増やす */
+  }
+
+  /* D-Padとアクションボタンを下に寄せる */
+  #touch-controls {
+    bottom: 5px; /* さらに下げる */
+    gap: 20px;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+
+  /* ボタン透過を強めて背景をもっと見せる */
+  #touch-controls button {
+    background: rgba(50, 50, 50, 0.4); /* 0.5→0.4 */
+    color: #fff;
+    border-radius: 10px;
+  }
+
+  /* Dパッド微調整 */
+  #dpad {
+    margin-top: 14px;
+  }
+}
