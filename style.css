@@ -88,53 +88,32 @@ button.act[data-act="save"],button.act[data-act="load"]{background:#27384e;}
   #actions .row{grid-template-columns:repeat(5,min(18vw,76px));}
 }
 
-/* --- 画面レイアウト調整（余白多め） --- */
+/* --- 画面レイアウト調整（最終版） --- */
 
-/* マップとUIの間にしっかり余白を取る */
-#screen {
-  margin-bottom: 40px; /* ここを大きめに */
-}
+/* デフォルト（PC/タブレット/広めの画面） */
+#screen { margin-bottom: 40px; }
+#touch-controls { margin-top: 16px; gap: 18px; }
+#dpad { margin-top: 8px; }
 
-/* タッチ操作ボタン間隔調整 */
-#touch-controls {
-  margin-top: 16px; /* マップとの距離 */
-  gap: 18px; /* ボタン間隔 */
-}
-
-/* Dパッド全体をさらに下げる */
-#dpad {
-  margin-top: 8px;
-}
-
-/* --- スマホ縦画面でのマップ視認性アップ --- */
+/* スマホ縦画面向け */
 @media (max-width: 480px) {
-  #screen {
-    margin-bottom: 60px; /* マップとボタンの距離をさらに広げる */
-  }
+  /* マップとボタンの距離をさらに広げる */
+  #screen { margin-bottom: 64px; }
 
+  /* ボタン群を少し下げ、安全領域も考慮 */
   #touch-controls {
-    margin-top: 20px; /* ボタン群の位置を下にずらす */
-    gap: 20px; /* ボタンの間隔を広めに */
+    bottom: 14px;               /* 下に寄せる */
+    gap: 20px;                  /* ボタン間隔広め */
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
   }
 
-  #dpad {
-    margin-top: 12px;
-  }
-}
-
-
-/* --- モバイル視認性改善 --- */
-@media (max-width: 480px) {
-  /* D-Padとアクションボタンの背景を半透明化 */
+  /* 半透明ボタンで背後のマップを見やすく */
   #touch-controls button {
-    background: rgba(50, 50, 50, 0.6); /* 半透明濃い灰色 */
-    color: white;
+    background: rgba(50, 50, 50, 0.5); /* 透明度は0.4〜0.6で好みに調整可 */
+    color: #fff;
     border-radius: 10px;
   }
 
-  /* ボタンを下に少し下げる（マップが見やすくなる） */
-  #touch-controls {
-    position: fixed;
-    bottom: 15px; /* デフォルトより下げる */
-  }
+  /* Dパッドだけ少し下げたい場合の微調整 */
+  #dpad { margin-top: 12px; }
 }
