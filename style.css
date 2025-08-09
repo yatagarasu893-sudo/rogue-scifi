@@ -87,3 +87,28 @@ button.act[data-act="save"],button.act[data-act="load"]{background:#27384e;}
 @media (max-width:380px){
   #actions .row{grid-template-columns:repeat(5,min(18vw,76px));}
 }
+
+/* ステータスとマップ間の余白 */
+#stats {
+  margin-bottom: 6px;
+}
+
+/* マップ表示の余白を広めに */
+#screen {
+  margin-bottom: 12px;
+}
+
+/* Dパッドとアクションの間隔調整 */
+#touch-controls {
+  gap: 14px;
+}
+
+/* Dパッドボタン間を少し広げる */
+#dpad {
+  gap: 10px;
+}
+
+/* アクションボタン間を少し広げる */
+#actions .row {
+  gap: 10px;
+}
